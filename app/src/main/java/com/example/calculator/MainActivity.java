@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         Button button6 = (Button) findViewById(R.id.button6);
         Button button7 = (Button) findViewById(R.id.button7);
         Button button8 = (Button) findViewById(R.id.button8);
+        Button button9 = (Button) findViewById(R.id.button9);
         Button buttonDot = (Button) findViewById(R.id.buttonDot);
 
         Button buttonEquals = (Button) findViewById(R.id.buttonEquals);
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         Button buttonMinus = (Button) findViewById(R.id.buttonMinus);
         Button buttonPlus = (Button) findViewById(R.id.buttonPlus);
 
+        // Création de la méthode permettant de réagir a un click sur un button
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,5 +64,28 @@ public class MainActivity extends AppCompatActivity {
                 newNumber.append(b.getText().toString());
             }
         };
+        button0.setOnClickListener(listener);
+        button1.setOnClickListener(listener);
+        button2.setOnClickListener(listener);
+        button3.setOnClickListener(listener);
+        button4.setOnClickListener(listener);
+        button5.setOnClickListener(listener);
+        button6.setOnClickListener(listener);
+        button7.setOnClickListener(listener);
+        button8.setOnClickListener(listener);
+        button9.setOnClickListener(listener);
+        buttonDot.setOnClickListener(listener);
+
+        /* 
+        int[] buttonIds = {R.id.button0, R.id.button1, R.id.button2, R.id.button3, R.id.button4,
+                R.id.button5, R.id.button6, R.id.button7, R.id.button8, R.id.button9,
+                R.id.buttonDot};
+
+        for (int buttonId : buttonIds) {
+            Button button = findViewById(buttonId);
+            button.setOnClickListener(listener);
+        }
+         */
+
     }
 }
