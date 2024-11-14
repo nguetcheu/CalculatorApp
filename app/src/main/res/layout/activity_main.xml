@@ -24,6 +24,7 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <!-- Gestion du focus -->
 
     <TextView
         android:id="@+id/operation"
@@ -44,6 +45,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:focusable="true"
         android:ems="10"
         android:inputType="number|numberDecimal|numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
