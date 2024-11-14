@@ -87,5 +87,28 @@ public class MainActivity extends AppCompatActivity {
         }
          */
 
+        View.OnClickListener listenerOperations = new View.OnClickListener() {
+            @Override
+            public void onClick(View viewOperation) {
+                Button b = (Button) viewOperation;
+                String operations = b.getText().toString();
+                String value = newNumber.getText().toString();
+                if (value.length() > 0) {
+                    performOperation(value, operations);
+                }
+                pendingOperation = operations;
+                displayOperation.setText(pendingOperation);
+            }
+        };
+
+        buttonEquals.setOnClickListener(listenerOperations);
+        buttonMinus.setOnClickListener(listenerOperations);
+        buttonMultiply.setOnClickListener(listenerOperations);
+        buttonMinus.setOnClickListener(listenerOperations);
+        buttonPlus.setOnClickListener(listenerOperations);
+    }
+
+    private void performOperation(String value, String operations) {
+        displayOperation.setText(operations);
     }
 }
