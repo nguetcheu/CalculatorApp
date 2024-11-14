@@ -1,6 +1,8 @@
 package com.example.calculator;
 
 import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,15 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText result;
+    private EditText newNumber;
+    private TextView displayOperation;
+
+    // Variables de gestion des operations et des types de calcul
+    private Double operand1 = null;
+    private Double operand2 = null;
+    private String pendingOperation = "=";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
